@@ -1,0 +1,11 @@
+import java.util.Base64;
+public class Encoding {
+    public static void main(String[] args)
+    {
+        String SampleUrl = "https://www.google.co.nz/?gfe_rd=cr&ei=dzbFV&gws_rd=ssl#q=java";
+        String encodedUrl = Base64.getUrlEncoder().encodeToString(SampleUrl.getBytes());
+        System.out.println("Encoded Url:\n"
+                + encodedUrl);
+        
+    }
+}
