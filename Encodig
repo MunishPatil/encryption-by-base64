@@ -6,6 +6,15 @@ public class Encoding {
         String encodedUrl = Base64.getUrlEncoder().encodeToString(SampleUrl.getBytes());
         System.out.println("Encoded Url:\n"
                 + encodedUrl);
+        String sample= "Convert this text using Base64";
+
+        String encodedStringWitPadding = Base64.getEncoder().encodeToString(sample.getBytes());
+        String encodedStringWithoutPadding = Base64.getEncoder().withoutPadding().encodeToString(sample.getBytes());
+
+        System.out.println("Encoded String With Padding:\n"
+                + encodedStringWitPadding);
+        System.out.println("Encoded String Without Padding:\n"
+                + encodedStringWithoutPadding);
         
     }
 }
